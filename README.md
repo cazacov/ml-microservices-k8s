@@ -47,6 +47,13 @@ sudo apt-get install python3-sklearn python3-sklearn-lib
 
 Install Docker
 
+Install hadolint
+
+```bash
+wget -O /usr/local/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-Linux-x86_64
+sudo chmod go+rx /usr/local/bin/hadolint
+```
+
 ## Setup the Environment
 
 * Create a virtualenv and activate it
