@@ -32,7 +32,7 @@ Install Python toolchain
 ```bash
 sudo apt update
 sudo apt install git
-sudo apt install python3-venv python3-dev pylint python3-wheel
+sudo apt install python3-venv python3-dev pylint python3-wheel pylin
 
 pip install --upgrade pip
 pip install wheel
@@ -52,6 +52,14 @@ Install hadolint
 ```bash
 wget -O /usr/local/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-Linux-x86_64
 sudo chmod go+rx /usr/local/bin/hadolint
+```
+
+Install CurcleCI
+```bash
+wget https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh
+less install.sh 
+sudo bash install.sh
+rm install.sh
 ```
 
 ## Setup the Environment
