@@ -1,14 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from flask.logging import create_logger
 import logging
+from flasgger import Swagger
 
 import pandas as pd
 from sklearn.externals import joblib
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
+Swagger(app)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
+
 
 def scale(payload):
     """Scales Payload"""
@@ -20,38 +23,24 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = "<h3>Sklearn Prediction Home</h3>"
-    return html.format(format)
+    """/ Route will redirect to API Docs: /apidocs"""
+
+#    html = "<h3>Sklearn Prediction Home</h3>"
+#    return html.format(format)
+    return redirect("/apidocs")
 
 @app.route("/predict", methods=['POST'])
 def predict():
     """Performs an sklearn prediction
+
+
+    POST /predict
+    ---
+    responses:
+        200:
+            description: Successful prediction
         
-        input looks like:
-        {
-        "CHAS":{
-        "0":0
-        },
-        "RM":{
-        "0":6.575
-        },
-        "TAX":{
-        "0":296.0
-        },
-        "PTRATIO":{
-        "0":15.3
-        },
-        "B":{
-        "0":396.9
-        },
-        "LSTAT":{
-        "0":4.98
-        }
-        
-        result looks like:
-        { "prediction": [ <val> ] }
-        
-        """
+    """
     
     # Logging the input payload
     json_payload = request.json
