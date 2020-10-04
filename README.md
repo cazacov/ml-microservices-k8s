@@ -1,6 +1,9 @@
 # Machine Learning Microservices on Kubernetes
 
-<include a CircleCI status badge, here>
+CircleCI continuous integration status: 
+
+[![CircleCI](https://circleci.com/gh/cazacov/ml-microservices-k8s.svg?style=svg)](https://circleci.com/gh/cazacov/ml-microservices-k8s)
+
 
 ## Project Overview
 
