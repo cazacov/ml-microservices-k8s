@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Exclude local Prometheus
+prometheus-2.21.0.linux-amd64

@@ -1,0 +1,7 @@
+# Exclude unnecessary files 
+
+prometheus-2.21.0.linux-amd64
+*.sh
+Dockerfile
+LICENSE
+.circleci
