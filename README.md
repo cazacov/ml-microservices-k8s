@@ -45,13 +45,19 @@ sudo apt install libblas-dev liblapack-dev libatlas-base-dev gfortran
 sudo apt-get install python3-sklearn python3-sklearn-lib
 ```
 
-Install Docker
+Install Docker & Kubernetes
 
 Install hadolint
 
 ```bash
 wget -O /usr/local/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-Linux-x86_64
 sudo chmod go+rx /usr/local/bin/hadolint
+```
+
+Install Amazon CLI
+
+```bash
+sudo apt  install awscli
 ```
 
 Install CurcleCI

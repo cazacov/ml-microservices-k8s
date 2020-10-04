@@ -4,9 +4,16 @@
 
 # Step 1:
 # Build image and add a descriptive tag
+docker build --tag=mlk8s .
 
 # Step 2: 
 # List docker images
+docker image ls ml*
+
+# Step 3: 
+# Run interactive shell
+#docker run -it mlk8s bash
 
 # Step 3: 
 # Run flask app
+docker run -p 80:80 mlk8s
