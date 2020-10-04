@@ -5,7 +5,8 @@ FROM python:3.7.3-stretch
 WORKDIR /app
 
 ## Step 2:
-# Copy requirements file and install dependencies
+# Install packages from requirements.txt
+# hadolint ignore=DL3013
 COPY requirements.txt /app/
 
 RUN pip install --upgrade pip && \

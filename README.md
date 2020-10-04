@@ -30,7 +30,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Prerequisites
 
-Install Python toolchain
+### Install Python toolchain
 
 ```bash
 sudo apt update
@@ -48,22 +48,26 @@ sudo apt install libblas-dev liblapack-dev libatlas-base-dev gfortran
 sudo apt-get install python3-sklearn python3-sklearn-lib
 ```
 
-Install Docker & Kubernetes
+### Install Docker
 
-Install hadolint
+### Install Kubernetes
+
+See instructions at https://microk8s.io/
+
+### Install hadolint
 
 ```bash
 wget -O /usr/local/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-Linux-x86_64
 sudo chmod go+rx /usr/local/bin/hadolint
 ```
 
-Install Amazon CLI
+### Install Amazon CLI
 
 ```bash
 sudo apt  install awscli
 ```
 
-Install CurcleCI
+### Install CircleCI
 ```bash
 wget https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh
 less install.sh 
@@ -87,4 +91,4 @@ rm install.sh
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
-* Run via kubectl
+* Run via kubectl (microk8s kubectl)
