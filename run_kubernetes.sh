@@ -7,7 +7,7 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath=localhost:32000/mlk8s
+dockerpath=cazacov/learning:mlk8s
 
 # Step 2
 # Run the Docker Hub container with kubernetes

@@ -6,7 +6,7 @@
 # Step 1 
 # Build and tag container
 docker build . -t mlk8s
-docker build . -t localhost:32000/mlk8s
+docker tag mlk8s localhost:32000/mlk8s
 
 # Step 2
 # Push it to the local image repo
