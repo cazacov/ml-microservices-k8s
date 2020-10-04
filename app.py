@@ -36,9 +36,46 @@ def predict():
 
     POST /predict
     ---
+    consumes:
+    - application/json
+    parameters:
+    - in: body
+      name: payload
+      description: JSON object 
+      required: true
+      schema:
+            type: object
+            properties:
+                chas:
+                    type: number
+                    description: "Charles River dummy variable (1 if tract bounds river; else 0)"
+                rm:
+                    type: number
+                    description: "Average number of rooms per dwelling"
+                tax:
+                    type: number
+                    description: "Full-value property-tax rate per $10,000"
+                ptratio:
+                    type: number
+                    description: "Pupil-teacher ratio by town"
+                b:
+                    type: number
+                    description: "1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town"
+                lstat:
+                    type: number
+                    description: "percent lower status of the population'"
+    produces:
+    - application/json
     responses:
         200:
-            description: Successful prediction
+            description: Ok
+            schema:
+                type: object
+                properties:
+                    prediction:
+                        type: array
+                        items:
+                            type: number
         
     """
     
