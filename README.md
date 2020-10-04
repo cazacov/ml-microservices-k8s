@@ -39,10 +39,6 @@ sudo apt install python3-venv python3-dev pylint python3-wheel pylin
 
 pip install --upgrade pip
 pip install wheel
-pip install pylint
-pip install black
-pip install pytest
-pip install ipython
 
 sudo apt install libblas-dev liblapack-dev libatlas-base-dev gfortran
 sudo apt-get install python3-sklearn python3-sklearn-lib
@@ -50,9 +46,11 @@ sudo apt-get install python3-sklearn python3-sklearn-lib
 
 ### Install Docker
 
+See [instructions](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04).
+
 ### Install Kubernetes
 
-See instructions at https://microk8s.io/
+For local installtion of Kubernetes on Ubuntu see instructions at https://microk8s.io/
 
 ### Install hadolint
 
@@ -77,7 +75,7 @@ rm install.sh
 
 ## Setup the Environment
 
-* Create a virtualenv and activate it
+* Create a virtualenv with `make setup` and activate it with `source ~/.ml-microservices-k8s/bin/activate` 
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
@@ -85,10 +83,16 @@ rm install.sh
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Run in microk8s (local Kubernetes for Ubuntu):  `./run_microk8s.sh`
+
+### Continuous Integration
+
+1. Check CircleCI config: `make validate-circleci`
+2. Run local build: `make run-circleci-local`
 
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
-* Run via kubectl (microk8s kubectl)
+* Run via kubectl (or microk8s kubectl)
