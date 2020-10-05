@@ -10,7 +10,9 @@ dockerpath=cazacov/learning:mlk8s
 microk8s kubectl run mlk8s \
     --generator =run-pod/v1 \
     --image=$dockerpath \
-    --port=80 --labels app=mlk8s
+    --port=80 \
+    --image-pull-policy Always \
+    --labels app=mlk8s
 
 # Step 3:
 # List kubernetes pods

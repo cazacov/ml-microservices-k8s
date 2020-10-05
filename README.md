@@ -50,7 +50,7 @@ See [instructions](https://www.digitalocean.com/community/tutorials/how-to-insta
 
 ### Install Kubernetes
 
-For local installtion of Kubernetes on Ubuntu see instructions at https://microk8s.io/
+For local installation of Kubernetes on Ubuntu see instructions at https://microk8s.io/
 
 ### Install hadolint
 
